@@ -1,10 +1,6 @@
 {
   "name": "german/gman-end-point",
-  "version": "0.1.0",
-  "minimum-stability": "dev",
-  "description": "Create and make available a custom NOT A REST endpoint 'http://localhost/wordpress/exercise/inpsyde'. When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.",
-  "keywords": ["wordpress", "plugin", "Gman-Custom-Endpoint"],
-  "homepage": "https://www.venadoblanco.com",
+  "type": "wordpress-plugin"
   "license": "GPL-2.0-or-later",
   "authors": [
     {
@@ -12,14 +8,5 @@
       "email": "keconecte@gmail.com",
       "homepage": "https://www.venadoblanco.com"
     }
-  ],
-  "require": {
-    "php": ">=7.2.25",
-    "composer/installers": "v1.8.0"
-  },
-  "extra": {
-     "installer-paths": {
-      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
-    }
-  }
+  ]
 }
