@@ -2,10 +2,11 @@
   "name": "german/gman-end-point",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
-  "authors": 
+  "authors":[ 
     {
       "name": "German Villegas",
       "email": "keconecte@gmail.com",
       "homepage": "https://www.venadoblanco.com"
     }
+	]
 }
