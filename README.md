@@ -1,0 +1,2 @@
+# wordpress_pluggin
+Create and make available a custom NOT A REST endpoint "http://localhost/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
