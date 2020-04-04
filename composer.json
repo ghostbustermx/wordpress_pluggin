@@ -1,6 +1,6 @@
 {
   "name": "german/gman-end-point",
-  "type": "wordpress-plugin"
+  "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "authors": 
     {
