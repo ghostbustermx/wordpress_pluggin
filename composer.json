@@ -19,7 +19,7 @@
     "composer/installers": "v1.8.0"
   },
   "config"      : {
-        "vendor-dir": "wp-content/german/vendor"
+        "vendor-dir": "wp-content/plugins/german/vendor"
     },
   "extra"       : {
         "installer-paths": {
