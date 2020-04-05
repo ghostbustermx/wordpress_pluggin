@@ -51,9 +51,8 @@ define ( 'WP_DEBUG_DISPLAY', false);
 
 define( 'GmanCustomEndpoint__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-
-
 require_once( GmanCustomEndpoint__PLUGIN_DIR . 'class.gmanEndPoint.php' );
+require_once( GmanCustomEndpoint__PLUGIN_DIR . 'class.gmanEndPoint.processRequest.php' );
 
 
 add_action( 'init', array( 'gmanEndPoint', 'init' ) );
