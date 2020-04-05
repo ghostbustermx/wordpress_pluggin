@@ -46,8 +46,8 @@ if ( !function_exists( 'add_action' ) ) {
 }
 
 define ( 'WP_DEBUG', false);
-define ( 'WP_DEBUG_LOG', true);
-define ( 'WP_DEBUG_DISPLAY', true);
+define ( 'WP_DEBUG_LOG', false);
+define ( 'WP_DEBUG_DISPLAY', false);
 
 define( 'GmanCustomEndpoint__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
