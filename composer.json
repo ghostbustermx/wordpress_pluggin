@@ -1,5 +1,5 @@
 {
-  "name": "german/gman_custom_endpoint",
+  "name": "german/gman-end-point",
   "type": "wordpress-plugin",
   "version": "1.0.5",
   "minimum-stability": "dev",
