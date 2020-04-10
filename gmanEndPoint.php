@@ -32,6 +32,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 Copyright 2005-2015 automattic, Inc.
 */
 
+namespace gman;
+
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 if (!defined ('ABSPATH')) {
     die;
@@ -45,15 +47,28 @@ if ( !function_exists( 'add_action' ) ) {
     exit;
 }
 
+
 define ( 'WP_DEBUG', false);
 define ( 'WP_DEBUG_LOG', false);
 define ( 'WP_DEBUG_DISPLAY', false);
 
 define( 'GmanCustomEndpoint__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
+
+
 require_once( GmanCustomEndpoint__PLUGIN_DIR . 'class.gmanEndPoint.php' );
 require_once( GmanCustomEndpoint__PLUGIN_DIR . 'class.gmanEndPoint.processRequest.php' );
 
 
+class MyClass {
+
+    public function addHooks() {
+
+
 add_action( 'init', array( 'gmanEndPoint', 'init' ) );
 add_action( 'parse_request', array( 'gmanEndPoint', 'endpoint' ) , 0);
+    }
+}
+
+$MyClass = new MyClass();
+$MyClass->addHooks();
