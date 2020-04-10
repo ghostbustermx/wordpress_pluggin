@@ -1,5 +1,6 @@
 <?php
 
+
 class gmanEndPoint {
 	private static $initiated = false;
 
