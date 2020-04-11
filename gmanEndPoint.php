@@ -4,7 +4,7 @@
  */
 /*
 /*
-Plugin Name: CLASS Gman Custom Endpoint
+Plugin Name: Gman Custom Endpoint
 Plugin URI: https://www.venadoblanco.com
 Description: Create and make available a custom NOT A REST endpoint "http://localhost/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
 Version: 0.1.0
@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 Copyright 2005-2015 automattic, Inc.
 */
 
-namespace gman;
+
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 if (!defined ('ABSPATH')) {
