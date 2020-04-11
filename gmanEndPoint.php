@@ -6,7 +6,7 @@
 /*
 Plugin Name: Gman Custom Endpoint
 Plugin URI: https://www.venadoblanco.com
-Description: Create and make available a custom NOT A REST endpoint "http://localhost/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
+Description: Create and make available a custom NOT A REST endpoint "http://localhost:8888/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
 Version: 0.1.0
 Author: German Villegas
 Author URI: https://www.venadoblanco.com
@@ -63,10 +63,8 @@ require_once( GmanCustomEndpoint__PLUGIN_DIR . 'class.gmanEndPoint.processReques
 class MyClass {
 
     public function addHooks() {
-
-
-add_action( 'init', array( 'gmanEndPoint', 'init' ) );
-add_action( 'parse_request', array( 'gmanEndPoint', 'endpoint' ) , 0);
+        add_action( 'init', array( 'gmanEndPoint', 'init' ) );
+        add_action( 'parse_request', array( 'gmanEndPoint', 'endpoint' ) , 0);
     }
 }
 
