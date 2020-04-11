@@ -1,5 +1,6 @@
 <?php
 
+
 class gmanEndPoint {
 	private static $initiated = false;
 
@@ -10,7 +11,7 @@ class gmanEndPoint {
 	}
 
 	
-	private static function init_hooks() {
+	public static function init_hooks() {
 		self::$initiated = true;
 		
 		add_action('init', 'add_endpoint');
