@@ -1,72 +1,35 @@
 === Gman Custom Endpoint ===
 Contributors: (German Villegas)
-Donate link: https://example.com/
+Author URI: https://www.venadoblanco.com
 Tags: comments, spam
-Requires at least: 4.6
+Requires at least: wordpress 5.3
 Tested up to: 5.3.2
-Stable tag: 4.3
-Requires PHP: 5.2.4
+Stable tag: 5.4
+Requires PHP: 7.2.4 or later
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
-
-A few notes about the sections above:
-
-*   "Contributors" is a comma separated list of wordpress.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+Create and make available a custom NOT A REST endpoint "http://localhost:8888/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
 
 == Installation ==
 
 This section describes how to install the plugin and get it working.
 
-e.g.
+1. Upload the plugin files to the `/wp-content/plugins/gman-end-point` directory, or install the plugin through the composer with "composer require german/gman-end-point" command.
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. (When installed, the plugin has to make available a custom endpoint on the WordPress site. With “custom endpoint” we mean an arbitrary URL not recognized by WP as a standard URL, like a permalink or so.
+Note that this is not a REST endpoint. When a visitor navigates to that endpoint, the plugin has to send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.
+The plugin will parse the JSON response and will use it to build and display an HTML table. Each row in the HTML table will show the details for a user. The column's id, name, and username are mandatory.
+The content of three mandatory columns must be a link (<a> tag). When a visitor clicks any of these links, the details of that user must be shown. For that, the plugin will do another API request to the user-details endpoint.
+See https://jsonplaceholder.typicode.com/guide.html for documentation.
+These details fetching requests must be asynchronous (AJAX) and the user details will be shown without reloading the page.
+At any time, the page will show details for at max one user. In fact, at every link click, a new user detail will load, replacing the one currently shown.
+)
 
-1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Use the Settings->Plugin Name screen to configure the plugin
-1. (Make your instructions match the desired user flow for activating and installing your plugin. Include any steps that might be needed for explanatory purposes)
 
-
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
 
 == Changelog ==
 
@@ -87,23 +50,17 @@ This version fixes a security related bug.  Upgrade immediately.
 
 == Arbitrary section ==
 
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
+Git to version my code is: https://github.com/ghostbustermx/wordpress_pluggin; Packagist is: https://packagist.org/packages/german/gman-end-point 
 
-== A brief Markdown Example ==
+== Markdown ==
 
 Ordered list:
 
-1. Some feature
-1. Another feature
-1. Something else about the plugin
+1. The plugin will parse the JSON response and will use it to build and display an HTML table
+2. The content of three mandatory columns must be a link (<a> tag)
+3. When a visitor clicks any of these links, the details of that user must be shown. For that, the plugin will do another API request to the user-details endpoint.
+4. These details fetching requests must be asynchronous (AJAX) and the user details will be shown without reloading the page.
 
-Unordered list:
-
-* something
-* something else
-* third thing
 
 Here's a link to [WordPress](https://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
 Titles are optional, naturally.
