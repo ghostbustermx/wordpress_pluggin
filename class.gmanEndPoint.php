@@ -1,5 +1,5 @@
 <?php
-
+define( 'HOURS', 60 * 60 );
 
 class gmanEndPoint {
 	private static $initiated = false;
@@ -68,16 +68,27 @@ class gmanEndPoint {
  * @description process API request and serve json response to HTML Table
  */
  public static function processEndPoint(){
-    $request = wp_remote_get( 'https://jsonplaceholder.typicode.com/users' );
 
-    if( is_wp_error( $request ) ) {
-        return false; // Bail early
-    }
+	 $response = self::get_api_info();
+	 processRequest::process($response);
 
-  $body = wp_remote_retrieve_body( $request );
 
-  $data = json_decode( $body );
-   processRequest::process($data);
  }
+
+	private static function get_api_info() {
+		global $apiInfo; // Check if it's in the runtime cache (saves database calls)
+		if( empty($apiInfo) ) $apiInfo = get_transient('api_info'); // Check database (saves expensive HTTP requests)
+		if( !empty($apiInfo) ) return $apiInfo;
+
+		$response = wp_remote_get('https://jsonplaceholder.typicode.com/users');
+		$data = wp_remote_retrieve_body($response);
+
+		if( empty($data) ) return false;
+
+		$apiInfo = json_decode($data); // Load data into runtime cache
+		set_transient( 'api_info', $apiInfo, 12 * HOURS ); // Store in database for up to 12 hours
+
+		return $apiInfo;
+	}
 
 }	

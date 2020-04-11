@@ -48,9 +48,11 @@ Upgrade notices describe the reason a user should upgrade.  No more than 300 cha
 = 0.5 =
 This version fixes a security related bug.  Upgrade immediately.
 
-== Arbitrary section ==
+== INFO section ==
+About to request  HTTP cache, the "function get_api_info()" store in database for up to 12 hours Then, you just need to call get_api_info() anywhere in your code to retrieve the data you need. If you call the function multiple times in the same request/script, it will still only yell out to the database once. If you call the function in multiple requests within a 12 hour period, it will only send the API request once.
+Talk about efficiency!.Of course I'd also recommend having a class implementation for this, so you can use instance variables rather than globals to store data;
 
-Git to version my code is: https://github.com/ghostbustermx/wordpress_pluggin; Packagist is: https://packagist.org/packages/german/gman-end-point 
+To Git version my code is: https://github.com/ghostbustermx/wordpress_pluggin; Packagist is: https://packagist.org/packages/german/gman-end-point . It is a simple plugin and has not dependences third party.
 
 == Markdown ==
 
