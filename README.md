@@ -2,7 +2,7 @@
 Contributors: (German Villegas)
 Author URI: https://www.venadoblanco.com
 Tags: wordpress, plugin
-Requires at least: wordpress 5.3
+Requires at least: wordpress 5
 Tested up to: 5.3.2
 Stable tag: 5.4
 Requires PHP: 7.2.4 or later
@@ -12,13 +12,13 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Create and make available a custom NOT A REST endpoint "http://localhost:/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
+Create and make available a custom NOT A REST endpoint "http://localhost/wordpress/exercise/inpsyde". When a visitor navigates to that endpoint, the plugin send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.The plugin will parse the JSON response and will use it to build and display an HTML table.
 
 == Installation ==
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the plugin files to the `/wp-content/plugins/gman-end-point` directory, or install the plugin through the composer with "composer require german/gman-end-point" command.
+1. Just upload the plugin files to the `/wp-content/plugins/gman-end-point` directory, or install the plugin through the composer with "composer require german/gman-end-point" command.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. (When installed, the plugin has to make available a custom endpoint on the WordPress site "/exercise/inpsyde". With “custom endpoint” we mean an arbitrary URL not recognized by WP as a standard URL, like a permalink or so.
 Note that this is not a REST endpoint. When a visitor navigates to that endpoint, the plugin has to send an HTTP request to a REST API endpoint. The API is available at https://jsonplaceholder.typicode.com/ and the endpoint to call is /users.
@@ -30,30 +30,21 @@ At any time, the page will show details for at max one user. In fact, at every l
 )
 
 
-
-== Changelog ==
-
-= 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
 == INFO section ==
 About to request  HTTP cache, the "function get_api_info()" store in database for up to 12 hours Then, you just need to call get_api_info() anywhere in your code to retrieve the data you need. If you call the function multiple times in the same request/script, it will still only yell out to the database once. If you call the function in multiple requests within a 12 hour period, it will only send the API request once.
-Talk about efficiency!.Of course I'd also recommend having a class implementation for this, so you can use instance variables rather than globals to store data; For the details request
-I use fetch to default cache.
+Talk about efficiency!.Of course I'd also recommend having a class implementation for this, so you can use instance variables rather than globals to store data; 
 
-To Git version my code is: https://github.com/ghostbustermx/wordpress_pluggin with 3 branches; Packagist is: https://packagist.org/packages/german/gman-end-point . It is a simple plugin and has not dependences third party.
+For the "user details request" I use fetch to default cache.
+
+The plugin has been testing on browser with a real WP installation: https://www.venadoblanco.com/Barnett_Conwell/exercise/inpsyde, and it's simple, it works!, and it has attention to details.
+
+To Git version my code is: https://github.com/ghostbustermx/wordpress_pluggin with 3 branches; 
+Packagist is: https://packagist.org/packages/german/gman-end-point . 
+It is a simple plugin and has not third party dependences.
+
+Phpunit in wordpress was challenging, I am not familiar with unit tests in wordpress, I hope it is enough to start and continue learning unit tests to wordpress with you.
+
+I really enjoyed this development.
 
 == Markdown ==
 
