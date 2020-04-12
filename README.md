@@ -41,6 +41,7 @@ The plugin has been testing on browser with a real WP installation: https://www.
 I use Git to version my code: https://github.com/ghostbustermx/wordpress_pluggin with 3 branches; 
 Packagist: https://packagist.org/packages/german/gman-end-point.
 Bitbucket: https://bitbucket.org/ghostbustermx/wordpress_pluggin/src/master/.
+Youtube video demo: https://www.youtube.com/watch?v=01DC9isS5Mo&feature=youtu.be 
  
 It is a simple plugin and has not third party dependences.
 
