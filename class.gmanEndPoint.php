@@ -65,7 +65,7 @@ class gmanEndPoint {
  /**
  * @param null
  * @return null
- * @description process API request and serve json response to HTML Table
+ * @description send process API request and serve json response to HTML Table
  */
  public static function processEndPoint(){
 
