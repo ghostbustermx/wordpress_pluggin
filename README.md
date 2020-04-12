@@ -53,7 +53,7 @@ About to request  HTTP cache, the "function get_api_info()" store in database fo
 Talk about efficiency!.Of course I'd also recommend having a class implementation for this, so you can use instance variables rather than globals to store data; For the details request
 I use fetch to default cache.
 
-To Git version my code is: https://github.com/ghostbustermx/wordpress_pluggin; Packagist is: https://packagist.org/packages/german/gman-end-point . It is a simple plugin and has not dependences third party.
+To Git version my code is: https://github.com/ghostbustermx/wordpress_pluggin with 3 branches; Packagist is: https://packagist.org/packages/german/gman-end-point . It is a simple plugin and has not dependences third party.
 
 == Markdown ==
 
