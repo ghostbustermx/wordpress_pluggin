@@ -38,8 +38,10 @@ For the "user details request" I use fetch to default cache.
 
 The plugin has been testing on browser with a real WP installation: https://www.venadoblanco.com/Barnett_Conwell/exercise/inpsyde, and it's simple, it works!, and it has attention to details.
 
-To Git version my code is: https://github.com/ghostbustermx/wordpress_pluggin with 3 branches; 
-Packagist is: https://packagist.org/packages/german/gman-end-point . 
+I use Git to version my code: https://github.com/ghostbustermx/wordpress_pluggin with 3 branches; 
+Packagist: https://packagist.org/packages/german/gman-end-point.
+Bitbucket: https://bitbucket.org/ghostbustermx/wordpress_pluggin/src/master/.
+ 
 It is a simple plugin and has not third party dependences.
 
 Phpunit in wordpress was challenging, I am not familiar with unit tests in wordpress, I hope it is enough to start and continue learning unit tests to wordpress with you.
